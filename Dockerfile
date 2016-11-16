@@ -45,6 +45,14 @@ RUN docker-php-ext-configure gd \
     docker-php-ext-install gd
 
 
+####### Additions to install composer and git
+RUN curl -s http://getcomposer.org/installer | php && \
+    mv composer.phar /usr/local/bin/composer && \
+    ln -s /usr/local/bin/composer /usr/bin/composer
+    
+RUN apt-get install -y --no-install-recommends \
+    git
+
 
 ####### Original 2 files were split here
 
