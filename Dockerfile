@@ -1,4 +1,4 @@
-FROM php:7.0-rc-fpm
+FROM php:7.0-fpm
 
 MAINTAINER Singingcode <singingcode@gmail.com>
 
